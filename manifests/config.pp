@@ -7,15 +7,8 @@ class snarl::config {
   $port      = 4200
   $ring_size = 64
 
-  package { 'augeas':
-    ensure => installed,
-  }
 
-  package { 'ruby-augeas':
-    require => [ Package['augeas'], Package['pkg-config'] ],
-    ensure   => 'installed',
-    provider => 'gem',
-  }
+  include fifo_test::config
 
   file { $conf:
     require => [ File["${base}/etc"], Exec["make_rel_snarl"] ],
