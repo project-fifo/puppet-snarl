@@ -1,4 +1,4 @@
 class snarl::compile {
 
-  class { fifo_test::compile: svc => 'snarl' }
+  fifo_test::compile{'howl': svc => 'snarl'}
   }

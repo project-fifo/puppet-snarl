@@ -1,8 +1,5 @@
 class snarl::svcs {
-  class { fifo_test::svcs:
-    svc     => 'snarl',
-    require => [
-                Exec[ 'user_privs_snarl' ],
-                ]
+  fifo_test::svcs{'snarl':
+    svc     => 'snarl'
   }
 }
