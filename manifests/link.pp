@@ -1,3 +1,3 @@
 class snarl::link {
-  fifo_test::link {'howl': svc => 'snarl'}
+  fifo_test::link {'snarl': svc => 'snarl'}
 }
