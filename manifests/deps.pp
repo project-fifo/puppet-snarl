@@ -1,3 +1,3 @@
 class snarl::deps {
-  class { fifo_test::deps: }
-  }
+  include fifo_test::deps
+}
