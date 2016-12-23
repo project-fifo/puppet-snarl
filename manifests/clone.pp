@@ -1,3 +1,3 @@
 class snarl::clone {
-  class {fifo_test::clone: repo => 'snarl'}
+  fifo_test::clone{ 'snarl': repo => 'snarl' }
   }
